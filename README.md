@@ -1,4 +1,4 @@
 # Colaborators #
-## Landen Tomlin ##
-## Joey Ampfer ##
-## Xander Murphy ##
+ - Landen Tomlin
+ - Joey Ampfer
+ - Xander Murphy
