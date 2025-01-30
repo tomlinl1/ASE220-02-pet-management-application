@@ -13,14 +13,86 @@
     <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/petshelter.png"
+            alt="Logo"
+            width="36"
+            height="36"
+            class="d-inline-block align-text-middle"
+          />
+          Best Pet Shelter
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <h1>Check out these pets!</h1>
-    <div class="container" >
+    <div class="container">
       <div class="row">
         <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/cat1.jpeg" class="card-img-top" alt="...">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img src="images/cat1.jpeg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <div style="display: flex; justify-content: space-between">
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
+                <div>
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Card subtitle
+                  </h6>
+                </div>
+                <div style="display: flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="icon female bi bi-gender-female"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
+                    />
+                  </svg>
+                  <span class="age">15 wks</span>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img src="images/cat4.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
                 <div>
                   <h5 class="card-title">Card title</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -42,7 +114,6 @@
                   <span class="age">15 wks</span>
                 </div>
               </div>
-
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
@@ -52,23 +123,39 @@
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/cat4.jpeg" class="card-img-top" alt="...">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img src="images/cat2.jpeg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/cat2.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
+                <div>
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Card subtitle
+                  </h6>
+                </div>
+                <div style="display: flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="icon male bi bi-gender-male"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
+                    />
+                  </svg>
+                  <span class="age">15 wks</span>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
@@ -76,34 +163,127 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/labrador-retriever.jpeg" class="card-img-top" alt="...">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img
+              src="images/labrador-retriever.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
+                <div>
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Card subtitle
+                  </h6>
+                </div>
+                <div style="display: flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="icon female bi bi-gender-female"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
+                    />
+                  </svg>
+                  <span class="age">15 wks</span>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/golden-retriever.jpg" class="card-img-top" alt="...">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img
+              src="images/golden-retriever.jpg"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
+                <div>
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Card subtitle
+                  </h6>
+                </div>
+                <div style="display: flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="icon male bi bi-gender-male"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
+                    />
+                  </svg>
+                  <span class="age">15 wks</span>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img src="images/german-shepard.jpg" class="card-img-top" alt="...">
+          <div class="card" style="width: 100%; min-width: 16rem">
+            <img
+              src="images/german-shepard.jpg"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Custom top of the card -->
+              <div
+                class="top-of-card"
+                style="display: flex; justify-content: space-between"
+              >
+                <div>
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Card subtitle
+                  </h6>
+                </div>
+                <div style="display: flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="icon male bi bi-gender-male"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
+                    />
+                  </svg>
+                  <span class="age">15 wks</span>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
