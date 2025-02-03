@@ -21,10 +21,25 @@
   justify-content: center;
   align-items: center;
 }
-
+.card {
+  overflow: hidden;
+  transition: 200ms;
+}
+.card:hover {
+  box-shadow: 0px 0px 8px #888888;
+}
+.card-body {
+  z-index: 10;
+  background-color: white;
+}
 .custom-img {
   height: 16rem;
   object-fit: cover;
+  transition-duration: 200ms;
+}
+.custom-img:hover {
+  animation-delay: 200ms;
+  transform: scale(1.2);
 }
 
 .detailPicture {
