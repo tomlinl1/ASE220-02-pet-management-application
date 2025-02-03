@@ -32,7 +32,7 @@ Meet Leo, a majestic Maine Coon with a gentle and affectionate nature. Leo enjoy
 • Microchipped.  
   
 **A Little Bit About Me:**  
-Say hello to Luna, a talkative and intelligent Siamese cat who loves to be the center of attention. Luna enjoys playing with interactive toys, climbing on cat trees, and curling up next to her favorite humans. She thrives in a home where she can engage in playful activities and receive plenty of affection.
+Say hello to Charlie, a talkative and intelligent Siamese cat who loves to be the center of attention. Charlie enjoys playing with interactive toys, climbing on cat trees, and curling up next to her favorite humans. She thrives in a home where she can engage in playful activities and receive plenty of affection.
 
 ---
 
