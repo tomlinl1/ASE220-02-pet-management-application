@@ -98,7 +98,7 @@ Meet Rex, a loyal and intelligent German Shepherd with a heart full of devotion.
 **Sex:** Female  
 **Color:** Golden  
 **Spayed / Neutered:** Yes  
-**Age:** 2 Years  
+**Age:** 5 months  
 **Animal ID:** 67584  
 **Microchip Number:** 982000364989321  
 **Status:**  
