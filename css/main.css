@@ -28,8 +28,8 @@
 }
 
 .detailPicture {
-  height: 300px;
-  width: auto;
+  height: auto;
+  width: 100%;
   border: 10px solid black;     
   border-radius: 5px;
 }
