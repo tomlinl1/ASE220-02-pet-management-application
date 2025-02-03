@@ -25,3 +25,10 @@
 .custom-img {
   height: 16rem;
 }
+
+.detailPicture {
+  height: 300px;
+  width: auto;
+  border: 10px solid black;     
+  border-radius: 5px;
+}
