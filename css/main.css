@@ -24,6 +24,7 @@
 
 .custom-img {
   height: 16rem;
+  object-fit: cover;
 }
 
 .detailPicture {
