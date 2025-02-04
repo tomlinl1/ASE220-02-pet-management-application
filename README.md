@@ -4,3 +4,6 @@
 ### Joey Ampfer  
 -  Navbar, age/gender on card, card animations, help with git
 ### Xander Murphy
+-  Created the dummy data 
+-  Created the info displayed on the detail pages
+-  Verified that all pages were w3c compliant
