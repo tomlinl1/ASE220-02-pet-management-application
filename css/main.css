@@ -19,7 +19,8 @@
 .heading {
   text-align: center;
   color: rgb(43 48 53);
-  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .container {
   padding-bottom: 2rem;
