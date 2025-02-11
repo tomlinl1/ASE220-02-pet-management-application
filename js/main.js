@@ -1,4 +1,4 @@
-const data = [
+var data = [
     {
         Name: 'Leo',
         Type: 'Cat',
@@ -42,44 +42,44 @@ const data = [
     },
     {
         Name: 'Daisy',
-        Type: '',
-        Breed: '',
-        Sex: '',
-        Color: '',
-        SpayedNeutered: '',
-        Age: '',
-        ID: '',
-        Microchip: '',
+        Type: 'Dog',
+        Breed: 'Labrador',
+        Sex: 'Female',
+        Color: 'Yellow',
+        SpayedNeutered: 'Yes',
+        Age: '3 Years',
+        ID: '48217',
+        Microchip: '48217',
         Status: ['Health checked', 'Vaccinations up to date', 'Regularly dewormed', 'Microchipped'],
-        Bio: ''
+        Bio: 'Say hello to Daisy, an energetic and affectionate Labrador Retriever! Daisy is always ready for an adventure, whether it’s a game of fetch, a swim in the lake, or a run in the park. She loves meeting new people and is incredibly friendly with both children and other pets. Daisy would thrive in an active home where she can be part of a loving family. When she’s not playing, she enjoys lounging around and soaking up belly rubs. Daisy is looking for a forever home where she can share her endless enthusiasm and love.'
 
     },
     {
         Name: 'Rex',
-        Type: '',
-        Breed: '',
-        Sex: '',
-        Color: '',
-        SpayedNeutered: '',
-        Age: '',
-        ID: '',
-        Microchip: '',
+        Type: 'Dog',
+        Breed: 'German Shepherd',
+        Sex: 'Male',
+        Color: 'Black and Tan',
+        SpayedNeutered: 'Yes',
+        Age: '4 Years',
+        ID: '52934',
+        Microchip: '982000364578902',
         Status: ['Health checked', 'Vaccinations up to date', 'Regularly dewormed', 'Microchipped'],
-        Bio: ''
+        Bio: 'Meet Rex, a loyal and intelligent German Shepherd with a heart full of devotion. Rex has been trained in basic commands and loves to stay active, making him a great companion for an active owner. He enjoys long walks, mental stimulation games, and guarding his loved ones with gentle protectiveness. Rex is great with older children and thrives in a structured environment. He’s looking for a home that will continue his training and provide him with the love and exercise he needs.'
 
     },
     {
         Name: 'Bella',
-        Type: '',
-        Breed: '',
-        Sex: '',
-        Color: '',
-        SpayedNeutered: '',
-        Age: '',
-        ID: '',
-        Microchip: '',
+        Type: 'Dog',
+        Breed: 'Golden Retriever',
+        Sex: 'Female',
+        Color: 'Golden',
+        SpayedNeutered: 'Yes',
+        Age: '5 months',
+        ID: '67584',
+        Microchip: '982000364989321',
         Status: ['Health checked', 'Vaccinations up to date', 'Regularly dewormed', 'Microchipped'],
-        Bio: ''
+        Bio: 'This is Bella, a cheerful and affectionate Golden Retriever with a heart as golden as her coat. Bella loves meeting new people and gets along wonderfully with kids and other animals. She enjoys playing in the yard, swimming, and learning new tricks. Bella is a loving and intelligent dog who would be the perfect addition to a fun and active home. She is ready to find a family who will cherish her playful nature and warm snuggles.'
 
     },
     {
