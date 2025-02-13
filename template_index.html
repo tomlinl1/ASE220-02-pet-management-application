@@ -49,10 +49,10 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div class="container relative">
         <h1 class="heading">Check out these pets!</h1>
         <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="ModalLabel"></h1>
@@ -69,10 +69,11 @@
           </div>
         </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script>
         let divRow = null;
         let currentIndex = 0;
@@ -91,7 +92,11 @@
 
               let divCard = document.createElement("div");
               divCard.classList.add("card");
-              divCard.innerHTML = `<img src="${data[i].Image}" class="card-img-top custom-img" alt="image of a main coon cat" >`
+              let image = document.createElement("img");
+              image.src = data[i].Image;
+              image.classList.add("card-img-top", "custom-img");
+              divCard.appendChild(image);
+              //divCard.innerHTML = `<img src="${data[i].Image}" class="card-img-top custom-img" alt="image of a main coon cat" >`
               
               let cardBody = document.createElement("div");
               cardBody.classList.add("card-body");
@@ -163,15 +168,19 @@
               cardText.append(info2);
 
               let cardBtn = document.createElement("a");
-              cardBtn.classList.add("btn", "btn-primary");
-              cardBtn.innerText = "Learn more!";
-              cardBtn.addEventListener("click", function () {
+              cardBtn.classList.add("btn", "btn-danger", "hidden", "delete-btn");
+              cardBtn.innerText = "Delete";
+              image.addEventListener("click", function () {
                 let modalTitle = document.querySelector('#ModalLabel');
                 let modalContent = document.querySelector('#ModalContent');
 
                 modalTitle.innerText = data[i].Name + " the " + data[i].Type;
                 modalContent.innerHTML =
-                `<dl>
+                `
+                <img src="${data[i].Image}" class="modal-img" >
+                <dl>
+                  <dt>A Little Bit About Me:</dt>
+                  <dd> ${data[i].Bio} </dd>
                   <dt> Breed: </dt> <dd> ${data[i].Breed} <dd>
                   <dt> Sex: </dt> <dd> ${data[i].Sex} </dd>
                   <dt> Color: </dt> <dd> ${data[i].Color} </dd>
@@ -188,10 +197,8 @@
                       <li> ${data[i].Status[3]} </li>
                     </ul>
                   </dd>
-                  <dt>A Little Bit About Me:</dt>
-                  <dd> ${data[i].Bio} </dd>
-              </dl>
-                  `
+                </dl>
+                `;
                 let modal = new bootstrap.Modal(document.querySelector('#Modal'));
                 modal.show();
               })
@@ -203,7 +210,7 @@
               cardTop.appendChild(genderIcon);
               cardBody.appendChild(cardTop);
               cardBody.appendChild(cardText);
-              cardBody.appendChild(cardBtn);
+              divCard.appendChild(cardBtn);
               divCard.appendChild(cardBody);
               //adding the card into the rows/columns
               divCol.appendChild(divCard);
@@ -227,6 +234,12 @@
 
           document.querySelector(".container").appendChild(loadMoreBtn);
           console.log(currentIndex);
+        });
+
+        $(function() {
+          $(document).on('click', '.delete-btn', function() {
+            $(this).closest('.card').remove();
+          });
         });
     </script>
     
