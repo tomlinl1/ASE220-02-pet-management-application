@@ -51,13 +51,13 @@
     </nav>
     <div class="container">
         <h1 class="heading">Check out these pets!</h1>
-        <div class="row" style="padding-bottom: 16px;"></div>
+        
     </div>
     <script src="js/main.js"></script>
     <script>
         let divRow = null;
 
-        for(let i=0; i < 9; i++) {
+        for(let i=0; i < data.length; i++) {
 
             if (i % 3 == 0) {
                 divRow = document.createElement("div");
@@ -70,7 +70,7 @@
 
             let divCard = document.createElement("div");
             divCard.classList.add("card");
-            divCard.innerHTML = `<img src="images/maine-coon.jpeg" class="card-img-top custom-img" alt="image of a main coon cat" >`
+            divCard.innerHTML = `<img src="${data[i].Image}" class="card-img-top custom-img" alt="image of a main coon cat" >`
             
             let cardBody = document.createElement("div");
             cardBody.classList.add("card-body");
@@ -86,30 +86,76 @@
             petBreed.classList.add("card-subtitle", "mb-2", "text-body-secondary");
             petBreed.innerText = data[i].Breed;
 
+            let genderIcon = document.createElement("div");
+            genderIcon.style = "display: flex";
+            let divSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            if (data[i].Sex == 'Female') {
+                
+                divSVG.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+                divSVG.setAttribute("fill", "currentColor");
+                divSVG.setAttribute("class", "icon female bi bi-gender-female");
+                divSVG.setAttribute("viewBox", "0 0 16 16");
+
+                path.setAttribute("fill-rule", "evenodd");
+                path.setAttribute(
+                "d",
+                "M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
+                );
+            }
+            else if (data[i].Sex == 'Male') {
+                divSVG.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+                divSVG.setAttribute("fill", "currentColor");
+                divSVG.setAttribute("class", "icon male bi bi-gender-male");
+                divSVG.setAttribute("viewBox", "0 0 16 16");
+
+                path.setAttribute("fill-rule", "evenodd");
+                path.setAttribute(
+                "d",
+                "M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
+                );
+            };
+            let petAge = document.createElement("span");
+            petAge.classList.add("age");
+            petAge.innerText = data[i].Age;
+
             //the svg data completely bricks live server so I'm not putting it in
 
             let cardText = document.createElement("ul");
             cardText.classList.add("card-text");
             let info1 = document.createElement("li");
-            info1.innerText = data[i].Color;
+            info1.innerText = "Color: " + data[i].Color;
             let info2 = document.createElement("li");
             if (data[i].Sex == 'Male') {
                 info2.innerText = 'Neutered';
             }
             else {
                 info2.innerText = 'Spayed';
-            }
+            };
+            
+            divSVG.appendChild(path);
+            
+            genderIcon.appendChild(divSVG);
+            genderIcon.appendChild(petAge);
+            
             cardText.append(info1);
             cardText.append(info2);
 
-            
+            let cardBtn = document.createElement("a");
+            cardBtn.classList.add("btn", "btn-primary");
+            cardBtn.innerText = "Learn more!";
+
+
+            //adding all the divs into the card itself
             cardTitle.appendChild(petName);
             cardTitle.appendChild(petBreed);
-            
             cardTop.appendChild(cardTitle);
+            cardTop.appendChild(genderIcon);
             cardBody.appendChild(cardTop);
             cardBody.appendChild(cardText);
+            cardBody.appendChild(cardBtn);
             divCard.appendChild(cardBody);
+            //adding the card into the rows/columns
             divCol.appendChild(divCard);
             divRow.appendChild(divCol);
             console.log(i+1 + " " +data[i].Microchip);
