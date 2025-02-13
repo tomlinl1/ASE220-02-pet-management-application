@@ -51,9 +51,28 @@
     </nav>
     <div class="container">
         <h1 class="heading">Check out these pets!</h1>
-        
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="ModalContent"> </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
     <script>
         let divRow = null;
 
@@ -144,7 +163,36 @@
             let cardBtn = document.createElement("a");
             cardBtn.classList.add("btn", "btn-primary");
             cardBtn.innerText = "Learn more!";
+            cardBtn.addEventListener("click", function () {
+              let modalTitle = document.querySelector('#ModalLabel');
+              let modalContent = document.querySelector('#ModalContent');
 
+              modalTitle.innerText = data[i].Name + " the " + data[i].Type;
+              modalContent.innerHTML =
+              `<dl>
+                <dt> Breed: </dt> <dd> ${data[i].Breed} <dd>
+                <dt> Sex: </dt> <dd> ${data[i].Sex} </dd>
+                <dt> Color: </dt> <dd> ${data[i].Color} </dd>
+                <dt> Spayed/Neutered: </dt> <dd> ${data[i].SpayedNeutered} </dd>
+                <dt> Age: </dt> <dd> ${data[i].Age} </dd>
+                <dt> Animal ID: </dt> <dd> ${data[i].ID} </dd>
+                <dt> Microchip Number:</dt> <dd> ${data[i].Microchip} </dd>
+                <dt> Status </dt>
+                <dd>
+                  <ul>
+                    <li> ${data[i].Status[0]} </li>
+                    <li> ${data[i].Status[1]} </li>
+                    <li> ${data[i].Status[2]} </li>
+                    <li> ${data[i].Status[3]} </li>
+                  </ul>
+                </dd>
+                <dt>A Little Bit About Me:</dt>
+                <dd> ${data[i].Bio} </dd>
+            </dl>
+                `
+              let modal = new bootstrap.Modal(document.querySelector('#Modal'));
+              modal.show();
+            })
 
             //adding all the divs into the card itself
             cardTitle.appendChild(petName);

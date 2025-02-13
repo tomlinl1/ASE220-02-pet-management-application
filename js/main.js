@@ -90,7 +90,7 @@ var data = [
     },
     {
         Name: 'Luna',
-        Image: ``,
+        Image: `images/ragdoll.jpg`,
         Type: 'Cat',
         Breed: 'Ragdoll',
         Sex: 'Female',
@@ -105,7 +105,7 @@ var data = [
     },
     {
         Name: 'Milo',
-        Image: ``,
+        Image: `images/Scottish-fold.jpg`,
         Type: 'Cat',
         Breed: 'Scottish Fold',
         Sex: 'Male',
@@ -120,7 +120,7 @@ var data = [
     },
     {
         Name: 'Snow',
-        Image: ``,
+        Image: `images/persian.jpg`,
         Type: 'Cat',
         Breed: 'Persian',
         Sex: 'Female',
@@ -135,7 +135,7 @@ var data = [
     },
     {
         Name: 'Simba',
-        Image: ``,
+        Image: `images/bengal.jpg`,
         Type: 'Cat',
         Breed: 'Bengal',
         Sex: 'Male',
@@ -150,7 +150,7 @@ var data = [
     },
     {
         Name: 'Nova',
-        Image: ``,
+        Image: `images/husky.jpg`,
         Type: 'Dog',
         Breed: 'Siberian Husky',
         Sex: 'Female',
@@ -165,7 +165,7 @@ var data = [
     },
     {
         Name: 'Finn',
-        Image: ``,
+        Image: `images/border-collie.jpg`,
         Type: 'Dog',
         Breed: 'Border Collie',
         Sex: 'Male',
@@ -180,7 +180,7 @@ var data = [
     },
     {
         Name: 'Ruby',
-        Image: ``,
+        Image: `images/cocker-spaniel.jpg`,
         Type: 'Dog',
         Breed: 'Cocker Spaniel',
         Sex: 'Female',
@@ -195,7 +195,7 @@ var data = [
     },
     {
         Name: 'Cooper',
-        Image: ``,
+        Image: `images/australian-shepherd.jpg`,
         Type: 'Dog',
         Breed: 'Australian Shepherd',
         Sex: 'Male',
@@ -210,7 +210,7 @@ var data = [
     },
     {
         Name: 'Coco',
-        Image: ``,
+        Image: `images/french-bulldog.jpg`,
         Type: 'Dog',
         Breed: 'French Bulldog',
         Sex: 'Female',
@@ -225,7 +225,7 @@ var data = [
     },
     {
         Name: 'Thor',
-        Image: ``,
+        Image: `images/norwegian-forest.avif`,
         Type: 'Cat',
         Breed: 'Norwegian Forest Cat',
         Sex: 'Male',
@@ -240,7 +240,7 @@ var data = [
     },
     {
         Name: 'Cleo',
-        Image: ``,
+        Image: `images/abyssinian.jpg`,
         Type: 'Cat',
         Breed: 'Abyssinian',
         Sex: 'Female',
@@ -255,7 +255,7 @@ var data = [
     },
     {
         Name: 'Willow',
-        Image: ``,
+        Image: `images/shetland.jpg`,
         Type: 'Dog',
         Breed: 'Shetland Sheepdog',
         Sex: 'Female',
