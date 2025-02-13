@@ -152,12 +152,16 @@
               let info1 = document.createElement("li");
               info1.innerText = "Color: " + data[i].Color;
               let info2 = document.createElement("li");
-              if (data[i].Sex == 'Male') {
-                  info2.innerText = 'Neutered';
+              if (!data[i].SpayedNeutered) {
+                info2.innerText = 'Not fixed';
+              } else {
+                if (data[i].Sex == 'Male') {
+                    info2.innerText = 'Neutered';
+                } else {
+                    info2.innerText = 'Spayed';
+                };
               }
-              else {
-                  info2.innerText = 'Spayed';
-              };
+
               
               divSVG.appendChild(path);
               

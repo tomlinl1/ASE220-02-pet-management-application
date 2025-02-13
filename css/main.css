@@ -23,7 +23,7 @@
   padding-bottom: 15px;
 }
 .container {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .male {
   color: blue;
@@ -101,6 +101,6 @@
 }
 #loadMoreBtn {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 1rem;
+  right: 1rem;
 }
