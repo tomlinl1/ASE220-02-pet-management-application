@@ -1,305 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pet Shelter</title>
-    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
-    <link rel="shortcut icon" href="./favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="BestPetShelter">
-    <link rel="manifest" href="./favicon/site.webmanifest">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    >
-    <link href="css/main.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/petshelter.png"
-            alt="Logo"
-            width="36"
-            height="36"
-            class="d-inline-block align-text-middle"
-          >
-          Best Pet Shelter
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <h1 class="heading">Check out these pets!</h1>
-      <div class="row" style="padding-bottom: 16px;">
-        <div class="col">
-          <div class="card">
-            <img src="images/maine-coon.jpeg" class="card-img-top custom-img" alt="image of a main coon cat" >
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Leo</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Maine Coon
-                  </h6>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pet Shelter</title>
+        <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="BestPetShelter">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- <link href="css/main.css" rel="stylesheet" /> -->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    </ul>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon male bi bi-gender-male"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
-                    />
-                  </svg>
-                  <span class="age">4 yrs</span>
-                </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Brown Tabby </li>
-                <li> Neutered </li>
-              </ul>
-              <a href="details-1-maine-coon.html" class="btn btn-primary">Learn more!</a>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem">
-            <img src="images/siamese.jpeg" class="card-img-top custom-img" alt="image of a siamese cat" >
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Charlie</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Siamese
-                  </h6>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Find your companion</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Local pets looking for love and a home just like yours.</h2>
+                        <a class="btn btn-primary" href="#about">View pets</a>
+                    </div>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon female bi bi-gender-female"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
-                    />
-                  </svg>
-                  <span class="age">3 yrs</span>
-                </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Seal Point </li>
-                <li> Spayed </li>
-              </ul>
-              <a href="details-2-siamese.html" class="btn btn-primary">Learn more!</a>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem">
-            <img src="images/british-shorthair.jpeg" class="card-img-top custom-img" alt="image of a british shorthair">
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Oliver</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    British Shorthair
-                  </h6>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+                        <p class="text-white-50">
+                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
+                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                        </p>
+                    </div>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon male bi bi-gender-male"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
-                    />
-                  </svg>
-                  <span class="age">5 yrs</span>
-                </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Blue (Gray) </li>
-                <li> Neutered </li>
-              </ul>
-              <a href="details-3-british-shorthair.html" class="btn btn-primary">Learn more!</a>
+                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem">
-            <img
-              src="images/labrador-retriever.jpeg"
-              class="card-img-top custom-img"
-              alt="image of a labrador retriever"
-            >
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Daisy</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Labrador Retriever
-                  </h6>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Shoreline</h4>
+                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                        </div>
+                    </div>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon female bi bi-gender-female"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
-                    />
-                  </svg>
-                  <span class="age">3 yrs</span>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Misty</h4>
+                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Yellow </li>
-                <li> Spayed </li>
-              </ul>
-              <a href="details-4-labrador.html" class="btn btn-primary">Learn more!</a>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Mountains</h4>
+                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem">
-            <img
-              src="images/german-shepard.jpg"
-              class="card-img-top custom-img"
-              alt="image of a german shepherd"
-            >
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Rex</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    German Shepherd
-                  </h6>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Email address input-->
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                            </div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
+                    </div>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon male bi bi-gender-male"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"
-                    />
-                  </svg>
-                  <span class="age">4 yrs</span>
-                </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Black and Tan </li>
-                <li> Neutered </li>
-              </ul>
-              <a href="details-5-german-shepard.html" class="btn btn-primary">Learn more!</a>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 100%; min-width: 16rem;">
-            <img
-              src="images/golden-retriever.jpg"
-              class="card-img-top custom-img"
-              alt="image of a golden retriever"
-            >
-            <div class="card-body">
-              <!-- Custom top of the card -->
-              <div
-                class="top-of-card"
-                style="display: flex; justify-content: space-between"
-              >
-                <div>
-                  <h5 class="card-title">Bella</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Golden Retriever
-                  </h6>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">+1 (555) 902-8832</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="display: flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="icon female bi bi-gender-female"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"
-                    />
-                  </svg>
-                  <span class="age">5 mths</span>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
                 </div>
-              </div>
-              <ul class="card-text">
-                <li> Color: Golden </li>
-                <li> Spayed </li>
-              </ul>
-              <a href="details-6-golden-retriever.html" class="btn btn-primary">Learn more!</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>

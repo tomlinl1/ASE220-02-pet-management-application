@@ -1,3 +1,6 @@
+* {
+  scrollbar-color: rgb(44, 44, 44) rgb(71, 71, 71);
+}
 .centered {
   display: flex;
   justify-content: center;
