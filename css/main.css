@@ -10,7 +10,7 @@
 .icon {
   width: 25px;
 }
-.navbar {
+/* .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -18,15 +18,25 @@
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgb(0, 0, 0, 20%);
   margin-bottom: 0.5rem;
-}
+} */
+ /* .navbar-onScroll {
+  background-color: rgba(255, 255, 255, 10%) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgb(0, 0, 0, 20%);
+ } */
 .heading {
   text-align: center;
   color: rgb(43 48 53);
   padding-top: 5px;
   padding-bottom: 15px;
 }
-.container {
+/* .container {
   padding-bottom: 3rem;
+} */
+#all-pets {
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+  position: relative;
 }
 .male {
   color: blue;
@@ -88,8 +98,8 @@
 }
 .delete-btn {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 0rem;
+  right: 0rem;
   z-index: 99;
 }
 .card:hover .btn {
@@ -99,9 +109,7 @@
   display: flex;
   justify-content: space-between;
 }
-.relative {
-  position: relative;
-}
+
 #loadMoreBtn {
   position: absolute;
   bottom: 1rem;

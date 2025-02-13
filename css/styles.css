@@ -11018,6 +11018,9 @@ body {
     padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
+  #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
@@ -11030,24 +11033,35 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 15%) !important;
+    backdrop-filter: blur(20px);
+    /* border-bottom: 1px solid rgb(0, 0, 0, 20%); */
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    /* color: #000; */
+    color: rgba(0, 0, 0, 0.70);
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover {
+    /* color: #000; */
+    color: rgba(0, 0, 0, 0.95);
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    /* color: #000; */
+    color: rgba(0, 0, 0, 0.70);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    /* color: #64a19d; */
+    color: rgba(0, 0, 0, 0.95);
   }
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    /* color: #64a19d; */
+    color: rgba(0, 0, 0, 0.75);
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
