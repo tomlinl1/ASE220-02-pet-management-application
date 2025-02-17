@@ -203,4 +203,5 @@ let divRow = null;
 
             data.push(formData);
             console.log(data); // Logs updated data array
+            document.getElementById("create").reset();
           });
