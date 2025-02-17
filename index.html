@@ -551,27 +551,40 @@
                 modalContent.innerHTML = // name, type, image, bio, breed, sex, color, spayed/nutered(yes or no), age, ID, microchip, status
                 `
                 <form>
-                  <label for="name">Name</label><br>
+                  <label for="name">Name:</label><br>
                   <input type="text"></input><br>
-                  <label for="type">Animal Type</label><br>
+                  <label for="type">Animal Type:</label><br>
+                    <input type="radio" id="dog" name="animalType" value="Dog"></input>
+                    <label for="dog">Dog</label><br>
+                    <input type="radio" id="cat" name="animalType" value="Cat"></input>
+                    <label for="cat">Cat</label><br>
+                  <label for="breed">Breed:</label><br>
                   <input type="text"></input><br>
-                  <label for="breed">Breed</label><br>
-                  <input type="text"></input><br>
-                  <label for="sex">Sex</label><br>
-                  <input type="text"></input><br>
-                  <label for="color">Color</label><br>
+                  <label for="sex">Sex:</label><br>
+                    <input type="radio" id="male" name="sex" value="Male"></input>
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="sex" value="Female"></input>
+                    <label for="female">Female</label><br>
+                  <label for="color">Color:</label><br>
                   <input type="text"></input><br>
                   <label for="spayedNeutered">Spayed or Neutered?</label><br>
+                    <input type="radio" id="true" name="spayedNeutered" value="true"></input>
+                    <label for="true">Yes</label><br>
+                    <input type="radio" id="false" name="spayedNeutered" value="false"></input>
+                    <label for="false">No</label><br>
+                  <label for="Age">Age:</label><br>
+                  <input type="number" id="age" name="age" min="0" max="20">
+                  <select id="yearMonth" name="yearMonth">
+                    <option value="Year">Years</option>
+                    <option value="Month">Months</option>
+                  </select><br>
+                  <label for="ID">Animal ID:</label><br>
                   <input type="text"></input><br>
-                  <label for="Age">Age</label><br>
+                  <label for="microchip">Microchip Number:</label><br>
                   <input type="text"></input><br>
-                  <label for="ID">Animal ID</label><br>
+                  <label for="status">Status:</label><br>
                   <input type="text"></input><br>
-                  <label for="microchip">Microchip Status</label><br>
-                  <input type="text"></input><br>
-                  <label for="status">Status</label><br>
-                  <input type="text"></input><br>
-                  <label for="bio">Bio</label><br>
+                  <label for="bio">Bio:</label><br>
                   <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
                 </form>
                 `;
