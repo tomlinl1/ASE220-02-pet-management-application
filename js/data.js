@@ -341,23 +341,4 @@ var data = [
     ],
     Bio: "Meet Willow, a smart and affectionate Shetland Sheepdog with a love for outdoor adventures. Willow enjoys running, herding toys, and learning new tricks. She thrives in an active home that can provide her with plenty of exercise and mental stimulation.",
   },
-  {
-    Name: "Willow",
-    Image: `images/shetland.jpg`,
-    Type: "Dog",
-    Breed: "Shetland Sheepdog",
-    Sex: "Female",
-    Color: "Merle",
-    SpayedNeutered: true,
-    Age: "2 Years",
-    ID: "89234",
-    Microchip: "982000365478912",
-    Status: [
-      "Health checked",
-      "Vaccinations up to date",
-      "Regularly dewormed",
-      "Microchipped",
-    ],
-    Bio: "Meet Willow, a smart and affectionate Shetland Sheepdog with a love for outdoor adventures. Willow enjoys running, herding toys, and learning new tricks. She thrives in an active home that can provide her with plenty of exercise and mental stimulation.",
-  },
 ];
