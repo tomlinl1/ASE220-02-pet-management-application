@@ -147,7 +147,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="create">
                   <label for="formFileSm" class="form-label">Upload your pet's image:</label>
                   <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
                   <label for="name">Name:</label><br>
@@ -604,12 +604,28 @@
               });
           });
         
-        $(function(){
+          
           $(document).on('click', '.btn-create', function(){
 
+            const formData = {
+              Name: document.getElementById("name").value,
+              Image: document.getElementById("formFileSm").files[0] ? document.getElementById("formFileSm").files[0].name : null,
+              Type: document.querySelector("input[name='animalType']:checked")?.value,
+              Breed: document.getElementById("breed").value,
+              Sex: document.querySelector("input[name='sex']:checked")?.value,
+              Color: document.getElementById("color").value,
+              SpayedNeutered: document.querySelector("input[name='spayedNeutered']:checked")?.value,
+              Age: document.getElementById("age").value + " " + document.getElementById("yearMonth").value,
+              ID: document.getElementById("ID").value,
+              Microchip: document.getElementById("microchip").value,
+              Status: document.getElementById("status").value,
+              Bio: document.getElementById("bio").value,
+            };
+
+            data.push(formData);
+            console.log(data); // Logs updated data array
           });
-        });
-    </script>
+      </script>
     
 
   </body>
