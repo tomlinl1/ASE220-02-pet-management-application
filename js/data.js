@@ -1,7 +1,7 @@
 var data = [
   {
     Name: "Leo",
-    Image: `images/maine-coon.jpeg`,
+    Image: `assets/petImages/maine-coon.jpeg`,
     Type: "Cat",
     Breed: "Maine Coon",
     Sex: "Male",
@@ -20,7 +20,7 @@ var data = [
   },
   {
     Name: "Charlie",
-    Image: `images/siamese.jpeg`,
+    Image: `assets/petImages/siamese.jpeg`,
     Type: "Cat",
     Breed: "Siamese",
     Sex: "Female",
@@ -39,7 +39,7 @@ var data = [
   },
   {
     Name: "Oliver",
-    Image: `images/british-shorthair.jpeg`,
+    Image: `assets/petImages/british-shorthair.jpeg`,
     Type: "Cat",
     Breed: "British Shorthair",
     Sex: "Male",
@@ -58,7 +58,7 @@ var data = [
   },
   {
     Name: "Daisy",
-    Image: `images/labrador-retriever.jpeg`,
+    Image: `assets/petImages/labrador-retriever.jpeg`,
     Type: "Dog",
     Breed: "Labrador",
     Sex: "Female",
@@ -77,7 +77,7 @@ var data = [
   },
   {
     Name: "Rex",
-    Image: `images/german-shepard.jpg`,
+    Image: `assets/petImages/german-shepard.jpg`,
     Type: "Dog",
     Breed: "German Shepherd",
     Sex: "Male",
@@ -96,7 +96,7 @@ var data = [
   },
   {
     Name: "Bella",
-    Image: `images/golden-retriever.jpg`,
+    Image: `assets/petImages/golden-retriever.jpg`,
     Type: "Dog",
     Breed: "Golden Retriever",
     Sex: "Female",
@@ -115,7 +115,7 @@ var data = [
   },
   {
     Name: "Luna",
-    Image: `images/ragdoll.jpg`,
+    Image: `assets/petImages/ragdoll.jpg`,
     Type: "Cat",
     Breed: "Ragdoll",
     Sex: "Female",
@@ -134,7 +134,7 @@ var data = [
   },
   {
     Name: "Milo",
-    Image: `images/Scottish-fold.jpg`,
+    Image: `assets/petImages/Scottish-fold.jpg`,
     Type: "Cat",
     Breed: "Scottish Fold",
     Sex: "Male",
@@ -153,7 +153,7 @@ var data = [
   },
   {
     Name: "Snow",
-    Image: `images/persian.jpg`,
+    Image: `assets/petImages/persian.jpg`,
     Type: "Cat",
     Breed: "Persian",
     Sex: "Female",
@@ -172,7 +172,7 @@ var data = [
   },
   {
     Name: "Simba",
-    Image: `images/bengal.jpg`,
+    Image: `assets/petImages/bengal.jpg`,
     Type: "Cat",
     Breed: "Bengal",
     Sex: "Male",
@@ -191,7 +191,7 @@ var data = [
   },
   {
     Name: "Nova",
-    Image: `images/husky.jpg`,
+    Image: `assets/petImages/husky.jpg`,
     Type: "Dog",
     Breed: "Siberian Husky",
     Sex: "Female",
@@ -210,7 +210,7 @@ var data = [
   },
   {
     Name: "Finn",
-    Image: `images/border-collie.jpg`,
+    Image: `assets/petImages/border-collie.jpg`,
     Type: "Dog",
     Breed: "Border Collie",
     Sex: "Male",
@@ -229,7 +229,7 @@ var data = [
   },
   {
     Name: "Ruby",
-    Image: `images/cocker-spaniel.jpg`,
+    Image: `assets/petImages/cocker-spaniel.jpg`,
     Type: "Dog",
     Breed: "Cocker Spaniel",
     Sex: "Female",
@@ -248,7 +248,7 @@ var data = [
   },
   {
     Name: "Cooper",
-    Image: `images/australian-shepherd.jpg`,
+    Image: `assets/petImages/australian-shepherd.jpg`,
     Type: "Dog",
     Breed: "Australian Shepherd",
     Sex: "Male",
@@ -267,7 +267,7 @@ var data = [
   },
   {
     Name: "Coco",
-    Image: `images/french-bulldog.jpg`,
+    Image: `assets/petImages/french-bulldog.jpg`,
     Type: "Dog",
     Breed: "French Bulldog",
     Sex: "Female",
@@ -286,7 +286,7 @@ var data = [
   },
   {
     Name: "Thor",
-    Image: `images/norwegian-forest.avif`,
+    Image: `assets/petImages/norwegian-forest.avif`,
     Type: "Cat",
     Breed: "Norwegian Forest Cat",
     Sex: "Male",
@@ -305,7 +305,7 @@ var data = [
   },
   {
     Name: "Cleo",
-    Image: `images/abyssinian.jpg`,
+    Image: `assets/petImages/abyssinian.jpg`,
     Type: "Cat",
     Breed: "Abyssinian",
     Sex: "Female",
@@ -324,7 +324,7 @@ var data = [
   },
   {
     Name: "Willow",
-    Image: `images/shetland.jpg`,
+    Image: `assets/petImages/shetland.jpg`,
     Type: "Dog",
     Breed: "Shetland Sheepdog",
     Sex: "Female",
