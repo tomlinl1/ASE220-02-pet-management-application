@@ -148,8 +148,10 @@
               </div>
               <div class="modal-body">
                 <form id="create">
-                  <label for="formFileSm" class="form-label">Upload your pet's image:</label>
-                  <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
+                  <div class="mb-3">
+                    <label for="petImage" class="form-label">URL to pet image</label>
+                    <input type="url" class="form-control" id="petImage" placeholder="url">
+                  </div>
                   <label for="name">Name:</label><br>
                   <input type="text" id="name" name="name"></input><br>
                   <label for="type">Animal Type:</label><br>
