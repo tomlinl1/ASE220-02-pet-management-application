@@ -121,10 +121,7 @@ function loadPets() {
           <dt> Status </dt>
           <dd>
             <ul>
-              <li> ${data[i].Status[0]} </li>
-              <li> ${data[i].Status[1]} </li>
-              <li> ${data[i].Status[2]} </li>
-              <li> ${data[i].Status[3]} </li>
+              ${data[i].Status.map(status => `<li>${status}</li>`).join("")}
             </ul>
           </dd>
         </dl>
@@ -179,6 +176,15 @@ $(function () {
   });
 });
 
+// Function to get all selected statuses of new pet
+function getSelectedStatuses() {
+  let selectedStatuses = [];
+  document.querySelectorAll('input[name="status"]:checked').forEach((checkbox) => {
+    selectedStatuses.push(checkbox.value);
+  });
+  return selectedStatuses;
+}
+
 $(document).on("click", ".btn-create", function () {
   const formData = {
     Name: document.getElementById("name").value,
@@ -196,7 +202,7 @@ $(document).on("click", ".btn-create", function () {
       document.getElementById("yearMonth").value,
     ID: document.getElementById("ID").value,
     Microchip: document.getElementById("microchip").value,
-    Status: document.getElementById("status").value,
+    Status: getSelectedStatuses(),
     Bio: document.getElementById("bio").value,
   };
 
