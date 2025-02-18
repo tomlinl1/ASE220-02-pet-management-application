@@ -6,14 +6,14 @@ function loadPets() {
   let itemsLoaded = 0;
   for (let i = currentIndex; i < Math.min(currentIndex + itemsPerPage, data.length); i++) {
     itemsLoaded++;
-    if (i % 3 == 0) {
-      divRow = document.createElement("div");
-      divRow.classList.add("row");
-      document.querySelector("#all-pets").appendChild(divRow);
-    }
+    // if (i % 3 == 0) {
+    //   divRow = document.createElement("div");
+    //   divRow.classList.add("row");
+    //   document.querySelector("#all-pets").appendChild(divRow);
+    // }
 
     let divCol = document.createElement("div");
-    divCol.classList.add("col");
+    divCol.classList.add("col-12","col-sm-6","col-lg-4");
 
     let divCard = document.createElement("div");
     divCard.classList.add("card");
@@ -141,7 +141,8 @@ function loadPets() {
     divCard.appendChild(cardBody);
     //adding the card into the rows/columns
     divCol.appendChild(divCard);
-    divRow.appendChild(divCol);
+    document.querySelector("#pet-row").appendChild(divCol);
+    // divRow.appendChild(divCol);
     console.log(i + 1 + " " + data[i].Microchip);
   }
   currentIndex += itemsLoaded;
