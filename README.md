@@ -1,6 +1,8 @@
 ## Collaborators & Contributions ##
 ### Landen Tomlin
--  Grid structure for index and detail pages, located relevant images, corrected AI data
+-  Created the functionality of the create button and form.
+-  Ensured the form submitted information correctly and displayed in an organized fashion. 
+-  Fixed logic to make submitting create form easier on users.
 ### Joey Ampfer  
 -  Navbar, age/gender on card, card animations, help with git
 ### Xander Murphy

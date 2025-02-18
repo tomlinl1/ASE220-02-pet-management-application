@@ -98,8 +98,7 @@ function loadPets() {
       let modalContent = document.querySelector("#ModalContent");
 
       let fixedStatus = data[i].SpayedNeutered; // Used to show Yes or No on the modal for the status of SpayedNeutered
-      if (fixedStatus == true) {
-        // instead of using true or false
+      if (fixedStatus == true) {                // instead of using true or false
         fixedStatus = "Yes";
       } else {
         fixedStatus = "No";
@@ -193,13 +192,8 @@ $(document).on("click", ".btn-create", function () {
     Breed: document.getElementById("breed").value,
     Sex: document.querySelector("input[name='sex']:checked")?.value,
     Color: document.getElementById("color").value,
-    SpayedNeutered:
-      document.querySelector("input[name='spayedNeutered']:checked")?.value ===
-      "true",
-    Age:
-      document.getElementById("age").value +
-      " " +
-      document.getElementById("yearMonth").value,
+    SpayedNeutered: document.querySelector("input[name='spayedNeutered']:checked")?.value === "true",
+    Age: document.getElementById("age").value + " " + document.getElementById("yearMonth").value,
     ID: document.getElementById("ID").value,
     Microchip: document.getElementById("microchip").value,
     Status: getSelectedStatuses(),
