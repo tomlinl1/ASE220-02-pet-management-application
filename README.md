@@ -6,4 +6,4 @@
 ### Xander Murphy
 -  Created the dummy data alongside the javascript array that holds it
 -  Created initial javascript loop that populates the 1st and 2nd set of 9 pets
--  Created the modal that shows up when a pet is clicked on (later improved upon by landen/joey)
+-  Created the modal that shows up when a pet is clicked on (later improved upon by Landen/Joey)
