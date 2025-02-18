@@ -208,4 +208,7 @@ $(document).on("click", ".btn-create", function () {
 
   data.push(formData);
   document.querySelector("#loadMoreBtn").style.display = "block";
+
+  // Clear the form data after submission
+  document.getElementById("create").reset();
 });
