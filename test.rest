@@ -14,8 +14,8 @@ Content-type: application/json
 
 {"test":true}
 
-### Retrieve a document
-GET http://127.0.0.1:3030/api/20250403T143342583Z
+### Retrieve a document (pets)
+GET http://127.0.0.1:3030/api/pets
 
 ### Modify the content of the document
 PUT http://127.0.0.1:3030/api/20250403T143342583Z

@@ -1,4 +1,5 @@
-let divRow = null;
+//let divRow = null;
+let data = []
 let currentIndex = 0;
 const itemsPerPage = 9;
 
@@ -151,8 +152,18 @@ function loadPets() {
   // }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadPets();
+document.addEventListener("DOMContentLoaded", async() => {
+  try {
+    const res = await fetch('/api/pets');
+    const pets = await res.json();
+    data = pets;
+    console.log("Loaded pets from API:", pets);
+    loadPets();
+  } catch (error) {
+    console.log("Couldn't load pets", error);
+  }
+  
+  
   let loadMoreBtn = document.createElement("button");
   loadMoreBtn.id = "loadMoreBtn";
   loadMoreBtn.classList.add("btn", "btn-secondary", "mt-3");

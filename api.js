@@ -1,11 +1,11 @@
 const express = require('express');
 const fs=require('fs')
+const path = require('path');
 
 const app = express()
 app.use(express.json());
 app.use(express.static('public'))
 const port = 3030
-
 
 /* HTML ENDPOINTS */
 // app.get('/', (req, res)=> {
@@ -26,15 +26,29 @@ app.post('/api', (req, res)=> {
     res.setHeader('filename',filename);
 	res.json(content);
 })
+
+// Gets pets from pets.json
+const petsFile = path.join(__dirname, 'data', 'pets.json');;
+app.get('/api/pets', (req, res) => {
+	if (!fs.existsSync(petsFile)) {
+		res.status(404).json({error : "pets.json not found"});
+	}
+	const pets = JSON.parse(fs.readFileSync(petsFile, 'utf8'));
+	res.json(pets);
+});
+/////////////////////////////////////////////////////////////////////////
+
 app.get('/api/:documentid', (req, res)=> {
-	let content=fs.existsSync(`./data/${req.params.documentid}.json`) ? JSON.parse(fs.readFileSync(`./data/${req.params.documentid}.json`,'utf8')) : {}
+	let content = fs.existsSync(`./data/${req.params.documentid}.json`) ? JSON.parse(fs.readFileSync(`./data/${req.params.documentid}.json`,'utf8')) : {}
 	res.json(content);
 })
+
 app.put('/api/:documentid', (req, res)=> {
 	let content=req.body
 	fs.writeFileSync(`./data/${req.params.documentid}.json`,JSON.stringify(content));
 	res.json(content);
 })
+
 app.delete('/api/:documentid', (req, res)=> {
 	if(fs.existsSync(`./data/${req.params.documentid}.json`)) fs.unlinkSync(`./data/${req.params.documentid}.json`)
 	res.json({message:'data deleted'});
