@@ -30,7 +30,8 @@ app.post('/api/jsonBlob', (req, res)=> {
 	let content=req.body;
 	fs.writeFileSync(`./blobs/${filename}.json`,JSON.stringify(content));
 	
-    res.setHeader('filename',filename);
+	res.setHeader('Location', `http://localhost:3030/api/jsonBlob/${filename}`);
+	res.setHeader('blobID', filename);
 	res.json(content);
 })
 

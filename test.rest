@@ -1,27 +1,28 @@
+### Create a new JSON Blob
+POST http://localhost:3030/api/jsonBlob
+Content-Type: application/json
 
-### HTML ENDPOINT: Your index page
-GET http://127.0.0.1:3030
+{
+  "name": "Example",
+  "type": "Test",
+  "active": true
+}
 
+### Get a JSON Blob by ID
+# Replace {blobId} with the actual blobId returned from the POST request
+GET http://localhost:3030/api/jsonBlob/{blobId}
 
-### HTML API DOCUMENTATION: This can be a different page
-GET http://127.0.0.1:3030/detail
+### Update an existing JSON Blob
+# Replace {blobId} with the actual blobId you want to update
+PUT http://localhost:3030/api/jsonBlob/{blobId}
+Content-Type: application/json
 
+{
+  "name": "Updated Example",
+  "type": "Updated Test",
+  "active": false
+}
 
-### API ENDPOINTS
-### Create a document
-POST http://127.0.0.1:3030/api
-Content-type: application/json
-
-{"test":true}
-
-### Retrieve a document (pets)
-GET http://127.0.0.1:3030/api/pets
-
-### Modify the content of the document
-PUT http://127.0.0.1:3030/api/20250403T143342583Z
-Content-type: application/json
-
-{"change":"the content"}
-
-### Delete the content of the document
-DELETE http://127.0.0.1:3030/api/20250403T143342583Z
+### Delete a JSON Blob
+# Replace {blobId} with the actual blobId you want to delete
+DELETE http://localhost:3030/api/jsonBlob/{blobId}
