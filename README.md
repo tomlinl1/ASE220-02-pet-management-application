@@ -28,4 +28,5 @@ Once the server is running, open your browser and go to:
 -  Documented api with test.rest
 -  Implemented delete a pet
 ### Xander Murphy
--  
+-  Moved all files to work with NodeJS
+-  implemented the initial loading of all pets
