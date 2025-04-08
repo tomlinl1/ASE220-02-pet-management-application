@@ -24,7 +24,7 @@ function loadMorePets() {
 
     let divCard = document.createElement("div");
     divCard.classList.add("card");
-    divCard.dataset.id = data[i].ID;
+    divCard.dataset.id = data[i].id;
     let image = document.createElement("img");
     image.src = data[i].Image;
     image.classList.add("card-img-top", "custom-img");
@@ -123,7 +123,7 @@ function loadMorePets() {
           <dt> Color: </dt> <dd> ${data[i].Color} </dd>
           <dt> Spayed/Neutered: </dt> <dd> ${fixedStatus} </dd>
           <dt> Age: </dt> <dd> ${data[i].Age} </dd>
-          <dt> Animal ID: </dt> <dd> ${data[i].ID} </dd>
+          <dt> Animal ID: </dt> <dd> ${data[i].PetID} </dd>
           <dt> Microchip Number:</dt> <dd> ${data[i].Microchip} </dd>
           <dt> Status </dt>
           <dd>
@@ -186,8 +186,8 @@ document.addEventListener("DOMContentLoaded", async() => {
 // ======= DELETE PET =======
 $(function () {
   $(document).on("click", ".delete-btn", async function () {
-    let petId = $(this).closest(".card").data("id");
-    let index = data.findIndex(pet => pet.ID == petId);
+    let id = $(this).closest(".card").data("id");
+    let index = data.findIndex(pet => pet.id == id);
     data.splice(index, 1);
 
     try {
@@ -199,8 +199,8 @@ $(function () {
         body: JSON.stringify(data),
       });
 
-      console.log('Pet deleted ', index, petId);
-      renderAllPets();
+      console.log('Pet deleted ', index, id);
+      $(this).closest(".card").remove();
 
     } catch (error) {
       console.log("Error deleting pet: ", error);
@@ -225,8 +225,9 @@ function getSelectedStatuses() {
   return selectedStatuses;
 }
 
-$(document).on("click", ".btn-create", function () {
+$(document).on("click", ".btn-create", async function () {
   const formData = {
+    id: Date.now(),
     Name: document.getElementById("name").value,
     Image: document.getElementById("petImage").value,
     Type: document.querySelector("input[name='animalType']:checked")?.value,
@@ -235,15 +236,29 @@ $(document).on("click", ".btn-create", function () {
     Color: document.getElementById("color").value,
     SpayedNeutered: document.querySelector("input[name='spayedNeutered']:checked")?.value === "true",
     Age: document.getElementById("age").value + " " + document.getElementById("yearMonth").value,
-    ID: document.getElementById("ID").value,
+    PetID: document.getElementById("PetID").value,
     Microchip: document.getElementById("microchip").value,
     Status: getSelectedStatuses(),
     Bio: document.getElementById("bio").value,
   };
 
   data.push(formData);
+
+  try {
+    const res = await fetch('./api/jsonBlob/pets', {
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+  } catch (error) {
+    console.log("Couldn't post pet", error);
+  }
+
   document.querySelector("#loadMoreBtn").style.display = "block";
 
   // Clear the form data after submission
   document.getElementById("create").reset();
+  //renderAllPets();
 });
