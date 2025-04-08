@@ -196,7 +196,7 @@ function getSelectedStatuses() {
   return selectedStatuses;
 }
 
-$(document).on("click", ".btn-create", function () {
+$(document).on("click", ".btn-create",  async function () {
   const formData = {
     Name: document.getElementById("name").value,
     Image: document.getElementById("petImage").value,
@@ -213,8 +213,21 @@ $(document).on("click", ".btn-create", function () {
   };
 
   data.push(formData);
+  
+  try{
+  const res = await fetch('./api/jsonBlob/pets', {
+    method: 'PUT',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+}catch (error) {
+  console.log("Couldn't post pet", error);
+}
   document.querySelector("#loadMoreBtn").style.display = "block";
 
   // Clear the form data after submission
   document.getElementById("create").reset();
+  loadPets();
 });

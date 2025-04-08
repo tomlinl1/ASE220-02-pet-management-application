@@ -38,18 +38,18 @@ app.get('/api/pets', (req, res) => {
 });
 /////////////////////////////////////////////////////////////////////////
 
-app.get('/api/:documentid', (req, res)=> {
+app.get('/api/jsonBlob/:documentid', (req, res)=> {
 	let content = fs.existsSync(`./data/${req.params.documentid}.json`) ? JSON.parse(fs.readFileSync(`./data/${req.params.documentid}.json`,'utf8')) : {}
 	res.json(content);
 })
 
-app.put('/api/:documentid', (req, res)=> {
+app.put('/api/jsonBlob/:documentid', (req, res)=> {
 	let content=req.body
 	fs.writeFileSync(`./data/${req.params.documentid}.json`,JSON.stringify(content));
 	res.json(content);
 })
 
-app.delete('/api/:documentid', (req, res)=> {
+app.delete('/api/jsonBlob/:documentid', (req, res)=> {
 	if(fs.existsSync(`./data/${req.params.documentid}.json`)) fs.unlinkSync(`./data/${req.params.documentid}.json`)
 	res.json({message:'data deleted'});
 })

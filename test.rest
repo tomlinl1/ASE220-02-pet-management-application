@@ -18,7 +18,7 @@ Content-type: application/json
 GET http://127.0.0.1:3030/api/pets
 
 ### Modify the content of the document
-PUT http://127.0.0.1:3030/api/20250403T143342583Z
+PUT http://127.0.0.1:3030/api/jsonBlob/20250403T165552338Z
 Content-type: application/json
 
 {"change":"the content"}
