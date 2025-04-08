@@ -1,12 +1,24 @@
-## How to start
-1. Backend
-- Download files
-- CD into the ASE220-02-pet-management-application folder
-- Run `npm install` to download dependencies
-- Run `node api.js` to start the server
+## 🚀 How to Start the Project
 
-2. Frontend
-- Go to http://localhost:3030/ 
+### 1. Backend Setup
+1. Download the project files.
+2. Open a terminal and navigate to the `ASE220-02-pet-management-application` directory:
+   ```bash
+   cd ASE220-02-pet-management-application
+   ```
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the backend server:
+   ```bash
+   node api.js
+   ```
+
+### 2. Frontend Access
+Once the server is running, open your browser and go to:
+[http://localhost:3030/](http://localhost:3030/)
+
 
 
 ## Collaborators & Contributions ##
