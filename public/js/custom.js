@@ -3,7 +3,13 @@ let data = []
 let currentIndex = 0;
 const itemsPerPage = 9;
 
-function loadPets() {
+function renderAllPets() {
+  document.querySelector("#pet-row").innerHTML = "";
+  currentIndex = 0;
+  loadMorePets(); // ⬇️ Loads first "page" of pets
+}
+
+function loadMorePets() {
   let itemsLoaded = 0;
   for (let i = currentIndex; i < Math.min(currentIndex + itemsPerPage, data.length); i++) {
     itemsLoaded++;
@@ -18,6 +24,7 @@ function loadPets() {
 
     let divCard = document.createElement("div");
     divCard.classList.add("card");
+    divCard.dataset.id = data[i].ID;
     let image = document.createElement("img");
     image.src = data[i].Image;
     image.classList.add("card-img-top", "custom-img");
@@ -147,18 +154,20 @@ function loadPets() {
   }
   currentIndex += itemsLoaded;
 
-  // if (currentIndex >= data.length) {
-  //   document.querySelector("#loadMoreBtn").style.display = "none";
-  // }
+  // Hide Load More if we're at the end
+  if (currentIndex >= data.length) {
+    document.querySelector("#loadMoreBtn").style.display = "none";
+  }
 }
+
 
 document.addEventListener("DOMContentLoaded", async() => {
   try {
-    const res = await fetch('/api/pets');
+    const res = await fetch('/api/jsonBlob/pets');
     const pets = await res.json();
     data = pets;
     console.log("Loaded pets from API:", pets);
-    loadPets();
+    renderAllPets();
   } catch (error) {
     console.log("Couldn't load pets", error);
   }
@@ -168,15 +177,35 @@ document.addEventListener("DOMContentLoaded", async() => {
   loadMoreBtn.id = "loadMoreBtn";
   loadMoreBtn.classList.add("btn", "btn-secondary", "mt-3");
   loadMoreBtn.innerText = "Load More Pets!";
-  loadMoreBtn.addEventListener("click", loadPets);
+  loadMoreBtn.addEventListener("click", loadMorePets);
 
   document.querySelector("#all-pets").appendChild(loadMoreBtn);
   console.log(currentIndex);
 });
 
+// ======= DELETE PET =======
 $(function () {
-  $(document).on("click", ".delete-btn", function () {
-    $(this).closest(".card").remove();
+  $(document).on("click", ".delete-btn", async function () {
+    let petId = $(this).closest(".card").data("id");
+    let index = data.findIndex(pet => pet.ID == petId);
+    data.splice(index, 1);
+
+    try {
+      let response = await fetch('/api/jsonBlob/pets', {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log('Pet deleted ', index, petId);
+      renderAllPets();
+
+    } catch (error) {
+      console.log("Error deleting pet: ", error);
+    }
+
   });
 });
 

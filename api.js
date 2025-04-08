@@ -17,40 +17,64 @@ app.get('/detail', (req, res)=> {
 })
 
 
-/* API ENDPOINTS */
-app.post('/api', (req, res)=> {
+/* ====== API ENDPOINTS ====== */
+
+/*Creating a JSON Blob is accomplished by sending a POST request to /api/jsonBlob. 
+	The body of the request should contain valid JSON that will used as the JSON Blob. 
+	Upon successfully storing the JSON blob, a 201 response will be returned. 
+	The Location header in the response will be set to the URL at which the blob can be accessed with a GET request. 
+	The body of the response is the JSON that was stored in the JSON blob. 
+*/
+app.post('/api/jsonBlob', (req, res)=> {
 	let filename=(new Date()).toISOString().replace(/[^a-zA-Z0-9]/g,'')
 	let content=req.body;
-	fs.writeFileSync(`./data/${filename}.json`,JSON.stringify(content));
+	fs.writeFileSync(`./blobs/${filename}.json`,JSON.stringify(content));
 	
     res.setHeader('filename',filename);
 	res.json(content);
 })
 
-// Gets pets from pets.json
-const petsFile = path.join(__dirname, 'data', 'pets.json');;
-app.get('/api/pets', (req, res) => {
-	if (!fs.existsSync(petsFile)) {
-		res.status(404).json({error : "pets.json not found"});
+/*
+	Retrieving a JSON Blob is accomplished by sending a GET request to / api / jsonBlob / <blobId>, where <blobId> is the last part of the URL path returned from the POST request.
+	Upon successfully retrieving the JSON Blob, a 200 response will be returned.
+	If no JSON Blob exists for the given <blobId>, a 404 response will be returned.
+	The body of the response is the JSON that was stored in the JSON Blob. 
+*/
+app.get('/api/jsonBlob/:documentid', (req, res) => {
+	if (!fs.existsSync(`./blobs/${req.params.documentid}.json`)) {
+		res.status(404).json({error : `Document with id ${req.params.documentid} not found`});
 	}
-	const pets = JSON.parse(fs.readFileSync(petsFile, 'utf8'));
-	res.json(pets);
-});
-/////////////////////////////////////////////////////////////////////////
-
-app.get('/api/:documentid', (req, res)=> {
-	let content = fs.existsSync(`./data/${req.params.documentid}.json`) ? JSON.parse(fs.readFileSync(`./data/${req.params.documentid}.json`,'utf8')) : {}
+	let content =  JSON.parse(fs.readFileSync(`./blobs/${req.params.documentid}.json`,'utf8'));
 	res.json(content);
 })
 
-app.put('/api/:documentid', (req, res)=> {
+/*
+	Updating a JSON Blob is accomplished by sending a PUT request to /api/jsonBlob/<blobId>. 
+	The request body should contain valid JSON that the stored JSON Blob will be replaced with. 
+	Upon successfully storing the new JSON Blob, a 200 response will be returned. 
+	If no JSON Blob exists for the given <blobId>, a 404 response will be returned. 
+	The body of the response is the JSON that was stored in the JSON Blob.
+*/
+app.put('/api/jsonBlob/:documentid', (req, res) => {
+	if (!fs.existsSync(`./blobs/${req.params.documentid}.json`)) {
+		res.status(404).json({error : `Document with id ${req.params.documentid} not found`});
+	}
 	let content=req.body
-	fs.writeFileSync(`./data/${req.params.documentid}.json`,JSON.stringify(content));
+	fs.writeFileSync(`./blobs/${req.params.documentid}.json`,JSON.stringify(content));
 	res.json(content);
 })
 
-app.delete('/api/:documentid', (req, res)=> {
-	if(fs.existsSync(`./data/${req.params.documentid}.json`)) fs.unlinkSync(`./data/${req.params.documentid}.json`)
+/*
+	Deleting a JSON Blob is accomplished by sending a DELETE request to /api/jsonBlob/<blobId>. 
+	Upon successfully deleting the JSON Blob, a 200 response will be returned. 
+	If no JSON Blob exists for the given <blobId>, a 404 response will be returned. 
+	If deleting blobs is not enabled, a 405 response will be returned.
+*/
+app.delete('/api/jsonBlob/:documentid', (req, res) => {
+	if (!fs.existsSync(`./blobs/${req.params.documentid}.json`)) {
+		res.status(404).json({error : `Document with id ${req.params.documentid} not found`});
+	}
+	fs.unlinkSync(`./blobs/${req.params.documentid}.json`)
 	res.json({message:'data deleted'});
 })
 
