@@ -1,4 +1,3 @@
-//let divRow = null;
 let data = []
 let currentIndex = 0;
 const itemsPerPage = 9;
@@ -160,7 +159,8 @@ function loadMorePets() {
   }
 }
 
-
+// Load pets using our server to load the currently stored pets. Utilizes the GET Method.
+// Also loads the load more button if needed after loading the pets.
 document.addEventListener("DOMContentLoaded", async() => {
   try {
     const res = await fetch('/api/jsonBlob/pets');
@@ -209,6 +209,7 @@ $(function () {
   });
 });
 
+// Load the modal that handles pet creation when clicking on the Add your pet button.
 $(function () {
   $(document).on("click", "#create-btn", function () {
     let modal = new bootstrap.Modal(document.querySelector("#CreateModal"));
@@ -224,7 +225,8 @@ function getSelectedStatuses() {
   });
   return selectedStatuses;
 }
-
+ 
+// Method to handle creation of a pet after a user clicks the created button.
 $(document).on("click", ".btn-create", async function () {
   const formData = {
     id: Date.now(),
@@ -244,6 +246,7 @@ $(document).on("click", ".btn-create", async function () {
 
   data.push(formData);
 
+  // Update the JSONBlob to store the new pet that a user creates. This utilizes the PUT method to update the JSONBlob.
   try {
     const res = await fetch('./api/jsonBlob/pets', {
       method: 'PUT',

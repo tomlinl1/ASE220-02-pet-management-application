@@ -1,3 +1,9 @@
+/*
+  This file is old and not used, but it serves as a way to fill our data set back to the number of pets that it should have after 
+  using the delete button. This is used for debugging and handling any errors that occur with that. This also serves as the template
+  for all new pet data. It is not used, but it still serves a purpose in our development process.
+
+*/ 
 var data = [
   {
     Name: "Leo",

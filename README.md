@@ -24,6 +24,7 @@ Once the server is running, open your browser and go to:
 ## Collaborators & Contributions ##
 ### Landen Tomlin
 -  Added functionality to the create button to add a pet to our JSONBlob through the use of our API
+-  Documented functions in custom.js
 ### Joey Ampfer  
 -  Documented api with test.rest
 -  Implemented delete a pet
